@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: pro
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+
+service:
+  feign:
+    xincan-k8s-provider: xincan-k8s-provider
