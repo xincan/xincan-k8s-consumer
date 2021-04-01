@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @FeignClient(
-        value = "${service.feign.k8s-provider.name}",
+        value = "${service.feign.k8s-provider.name:}",
         path = "provider",
         url = "${service.feign.k8s-provider.url:}"
 )

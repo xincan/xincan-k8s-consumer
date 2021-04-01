@@ -26,7 +26,7 @@ public class ConsumerServiceImpl implements ConsumerService {
 
     @Override
     public Consumer info() {
-        log.info("进入调用");
+        log.info("consumer调用provider");
         JSONObject provider = this.providerClient.info();
         try {
             InetAddress addr = InetAddress.getLocalHost();
