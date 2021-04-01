@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: pro
+    active: kubernetes
   cloud:
     loadbalancer:
       ribbon:
@@ -9,4 +9,5 @@ spring:
 
 service:
   feign:
-    xincan-k8s-provider: xincan-k8s-provider
+    k8s-provider:
+      name: xincan-k8s-provider

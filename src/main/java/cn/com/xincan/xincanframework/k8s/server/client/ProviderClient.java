@@ -4,10 +4,14 @@ import com.alibaba.fastjson.JSONObject;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(value = "${service.feign.xincan-k8s-provider}")
+@FeignClient(
+        value = "${service.feign.k8s-provider.name}",
+        path = "provider",
+        url = "${service.feign.k8s-provider.url:}"
+)
 public interface ProviderClient {
 
-    @GetMapping("/provider/info")
+    @GetMapping("/info")
     JSONObject info();
 
 }
